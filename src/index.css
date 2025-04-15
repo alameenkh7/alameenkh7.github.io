@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fontsource/inter";
 
 @layer base {
   :root {
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,56 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-product;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-primary text-white py-3 px-6 rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px];
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:translate-y-[-5px];
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+  
+  .nav-link {
+    @apply relative overflow-hidden inline-block font-medium transition-all duration-300;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute w-full h-0.5 bg-gradient-primary bottom-0 left-0 translate-x-[-100%] transition-transform duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply translate-x-0;
+  }
+
+  .reveal-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .reveal-animation.revealed {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
