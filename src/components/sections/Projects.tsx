@@ -1,6 +1,8 @@
 
-import { ExternalLink, ChevronRight, ChevronLeft } from "lucide-react";
-import { useState } from "react";
+import { ExternalLink, ChevronRight, ChevronLeft, Store, Globe } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Badge } from "@/components/ui/badge";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 interface Project {
   id: number;
@@ -8,46 +10,66 @@ interface Project {
   description: string;
   image: string;
   tags: string[];
-  link?: string;
+  techStack: string[];
+  links: {
+    website?: string;
+    playStore?: string;
+    appStore?: string;
+  };
 }
 
 const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Deal Buddy",
-      description: "End-to-end eCommerce platform with scalable architecture using AWS and distributed system principles, helping them from ideation to launch.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
-      tags: ["eCommerce", "AWS", "Distributed Systems"],
-      link: "#"
+      title: "DealBuddy",
+      description: "High-traffic scalable B2C eCommerce app that combines gamification with flash deals.",
+      image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      tags: ["eCommerce", "Gamification", "Mobile App"],
+      techStack: ["Node.js", "NestJS", "AWS", "PostgreSQL"],
+      links: {
+        playStore: "#",
+        appStore: "#"
+      }
     },
     {
       id: 2,
-      title: "Security Core",
-      description: "Advanced security solution with real-time threat detection and prevention, designed for enterprise-level protection.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      tags: ["Security", "Monitoring", "Enterprise"],
-      link: "#"
+      title: "Hive Wealth",
+      description: "Social network for investors built using GoLang, Plaid API, and financial modeling features.",
+      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      tags: ["Fintech", "Social Network", "Investing"],
+      techStack: ["GoLang", "Plaid API", "React Native"],
+      links: {
+        appStore: "#"
+      }
     },
     {
       id: 3,
-      title: "AI Assistant",
-      description: "Custom AI-powered business tool that automates repetitive tasks and provides data-driven insights for decision making.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80",
-      tags: ["AI", "Business Intelligence", "Automation"],
-      link: "#"
+      title: "Besync ERP",
+      description: "Flexible ERP customization studio built on our proprietary ERP solution.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      tags: ["ERP", "Enterprise", "B2B"],
+      techStack: ["Custom ERP Framework"],
+      links: {
+        website: "https://www.besync.in"
+      }
     },
     {
       id: 4,
-      title: "GameMaster Platform",
-      description: "Gamified learning platform that enhances user engagement through interactive challenges and reward systems.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      tags: ["Gamification", "Education", "React"],
-      link: "#"
+      title: "Estative",
+      description: "Platform for brokers, developers, and investors with property listings, CRM, and lead management.",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80",
+      tags: ["Real Estate", "CRM", "Mobile App"],
+      techStack: ["Firebase", "Flutter", "Node.js"],
+      links: {
+        playStore: "#",
+        appStore: "#"
+      }
     }
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const projectsRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
@@ -57,10 +79,31 @@ const Projects = () => {
     setCurrentSlide((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+
+    return () => {
+      cards.forEach(card => {
+        observer.unobserve(card);
+      });
+    };
+  }, []);
+
   return (
     <section id="projects" className="py-20 bg-white dark:bg-rearway-navy/50">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-animation">
           <h2 className="section-title gradient-text mb-4">Our Projects</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
             We design and develop custom software solutions that drive business growth and innovation
@@ -68,11 +111,12 @@ const Projects = () => {
         </div>
 
         {/* Desktop View - Grid Layout */}
-        <div className="hidden lg:grid grid-cols-2 gap-8">
-          {projects.map((project) => (
+        <div className="hidden lg:grid grid-cols-2 gap-8" ref={projectsRef}>
+          {projects.map((project, index) => (
             <div 
               key={project.id} 
-              className="bg-gray-50 dark:bg-gray-800/40 rounded-xl overflow-hidden shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
+              className="project-card reveal-animation bg-gray-50 dark:bg-gray-800/40 rounded-xl overflow-hidden shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="relative h-64 overflow-hidden">
                 <img 
@@ -81,10 +125,10 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-70"></div>
-                <div className="absolute bottom-4 left-4 flex gap-2">
-                  {project.tags.map((tag, index) => (
+                <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
+                  {project.tags.map((tag, idx) => (
                     <span 
-                      key={index} 
+                      key={idx} 
                       className="text-xs font-medium px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white"
                     >
                       {tag}
@@ -94,20 +138,75 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">{project.description}</p>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-2xl font-bold">{project.title}</h3>
+                  <div className="flex space-x-2">
+                    {project.links.website && (
+                      <a 
+                        href={project.links.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gradient-primary hover:text-white transition-colors"
+                        aria-label={`Visit ${project.title} website`}
+                      >
+                        <Globe size={16} />
+                      </a>
+                    )}
+                    {project.links.playStore && (
+                      <HoverCard>
+                        <HoverCardTrigger asChild>
+                          <a 
+                            href={project.links.playStore} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gradient-primary hover:text-white transition-colors"
+                            aria-label={`Download ${project.title} from Play Store`}
+                          >
+                            <Store size={16} />
+                          </a>
+                        </HoverCardTrigger>
+                        <HoverCardContent className="w-auto">
+                          <p className="text-sm">Google Play Store</p>
+                        </HoverCardContent>
+                      </HoverCard>
+                    )}
+                    {project.links.appStore && (
+                      <HoverCard>
+                        <HoverCardTrigger asChild>
+                          <a 
+                            href={project.links.appStore} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gradient-primary hover:text-white transition-colors"
+                            aria-label={`Download ${project.title} from App Store`}
+                          >
+                            <Store size={16} />
+                          </a>
+                        </HoverCardTrigger>
+                        <HoverCardContent className="w-auto">
+                          <p className="text-sm">Apple App Store</p>
+                        </HoverCardContent>
+                      </HoverCard>
+                    )}
+                  </div>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                 
-                {project.link && (
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center text-rearway-blue font-medium hover:underline"
-                  >
-                    View Project
-                    <ExternalLink size={16} className="ml-1" />
-                  </a>
-                )}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.techStack.map((tech, idx) => (
+                    <Badge key={idx} variant="outline" className="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+                
+                <a 
+                  href="#" 
+                  className="inline-flex items-center text-rearway-blue font-medium hover:underline"
+                >
+                  View Case Study
+                  <ExternalLink size={16} className="ml-1" />
+                </a>
               </div>
             </div>
           ))}
@@ -151,20 +250,58 @@ const Projects = () => {
             </div>
             
             <div className="p-6 bg-gray-50 dark:bg-gray-800/40">
-              <h3 className="text-2xl font-bold mb-3">{projects[currentSlide].title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">{projects[currentSlide].description}</p>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-2xl font-bold">{projects[currentSlide].title}</h3>
+                <div className="flex space-x-2">
+                  {projects[currentSlide].links.website && (
+                    <a 
+                      href={projects[currentSlide].links.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gradient-primary hover:text-white transition-colors"
+                    >
+                      <Globe size={16} />
+                    </a>
+                  )}
+                  {projects[currentSlide].links.playStore && (
+                    <a 
+                      href={projects[currentSlide].links.playStore} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gradient-primary hover:text-white transition-colors"
+                    >
+                      <Store size={16} />
+                    </a>
+                  )}
+                  {projects[currentSlide].links.appStore && (
+                    <a 
+                      href={projects[currentSlide].links.appStore} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gradient-primary hover:text-white transition-colors"
+                    >
+                      <Store size={16} />
+                    </a>
+                  )}
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{projects[currentSlide].description}</p>
               
-              {projects[currentSlide].link && (
-                <a 
-                  href={projects[currentSlide].link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center text-rearway-blue font-medium hover:underline"
-                >
-                  View Project
-                  <ExternalLink size={16} className="ml-1" />
-                </a>
-              )}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {projects[currentSlide].techStack.map((tech, idx) => (
+                  <Badge key={idx} variant="outline" className="bg-gray-100 dark:bg-gray-700">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+              
+              <a 
+                href="#" 
+                className="inline-flex items-center text-rearway-blue font-medium hover:underline"
+              >
+                View Case Study
+                <ExternalLink size={16} className="ml-1" />
+              </a>
             </div>
           </div>
 

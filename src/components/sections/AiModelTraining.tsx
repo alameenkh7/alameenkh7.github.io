@@ -121,7 +121,7 @@ const AiModelTraining = () => {
                     value={solution.id}
                     className="w-full justify-start gap-3 p-4 text-left data-[state=active]:bg-gradient-primary data-[state=active]:text-white transition-all duration-300"
                   >
-                    {solution.icon}
+                    <div className="w-6 h-6">{solution.icon}</div>
                     <span>{solution.title}</span>
                   </TabsTrigger>
                 ))}

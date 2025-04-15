@@ -14,6 +14,7 @@ import AiModelTraining from "../components/sections/AiModelTraining";
 import AiUseCases from "../components/sections/AiUseCases";
 import ModelTrainingPipeline from "../components/sections/ModelTrainingPipeline";
 import TechStack from "../components/sections/TechStack";
+import CaseStudies from "../components/sections/CaseStudies";
 
 const Index = () => {
   useEffect(() => {
@@ -52,11 +53,12 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
+        <Projects />
+        <CaseStudies />
         <AiAgentWorkflow />
         <AiModelTraining />
         <AiUseCases />
         <ModelTrainingPipeline />
-        <Projects />
         <TechStack />
         <About />
         <Testimonials />
