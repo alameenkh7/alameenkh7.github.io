@@ -113,23 +113,24 @@ const AiModelTraining = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
-            <TabsList className="flex flex-col space-y-2 w-full bg-transparent">
-              {solutions.map(solution => (
-                <TabsTrigger 
-                  key={solution.id} 
-                  value={solution.id}
-                  className="w-full justify-start gap-3 p-4 text-left data-[state=active]:bg-gradient-primary data-[state=active]:text-white transition-all duration-300"
-                  onClick={() => setActiveTab(solution.id)}
-                >
-                  {solution.icon}
-                  <span>{solution.title}</span>
-                </TabsTrigger>
-              ))}
-            </TabsList>
+            <Tabs value={activeTab} onValueChange={setActiveTab}>
+              <TabsList className="flex flex-col space-y-2 w-full bg-transparent">
+                {solutions.map(solution => (
+                  <TabsTrigger 
+                    key={solution.id} 
+                    value={solution.id}
+                    className="w-full justify-start gap-3 p-4 text-left data-[state=active]:bg-gradient-primary data-[state=active]:text-white transition-all duration-300"
+                  >
+                    {solution.icon}
+                    <span>{solution.title}</span>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
           </div>
 
           <div className="lg:col-span-2">
-            <Tabs value={activeTab} onValueChange={setActiveTab} defaultValue="llm-training">
+            <Tabs value={activeTab} onValueChange={setActiveTab}>
               {solutions.map(solution => (
                 <TabsContent key={solution.id} value={solution.id} className="mt-0">
                   <Card className="border-0 shadow-lg overflow-hidden">
