@@ -9,6 +9,7 @@ import {
   CarouselPrevious 
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 interface CaseStudy {
   id: number;
@@ -156,7 +157,7 @@ const CaseStudies = () => {
           >
             <CarouselContent>
               {caseStudies.map((study, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/1 pl-4">
+                <CarouselItem key={index} className="md:basis-full lg:basis-full pl-4">
                   <div className="p-1">
                     <Card className="border-0 overflow-hidden shadow-lg card-hover">
                       <div className="h-2 bg-gradient-primary"></div>
@@ -169,19 +170,21 @@ const CaseStudies = () => {
                                 alt={study.title} 
                                 className="w-full h-64 object-cover"
                               />
-                              <div className="absolute top-3 right-3 px-3 py-1 bg-white/90 dark:bg-gray-800/90 rounded-full text-sm font-medium">
-                                {study.clientType === "startup" ? "Startup" : 
-                                 study.clientType === "enterprise" ? "Enterprise" : "Mid-size Business"}
+                              <div className="absolute top-3 right-3">
+                                <Badge variant="secondary" className="font-medium bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200">
+                                  {study.clientType === "startup" ? "Startup" : 
+                                   study.clientType === "enterprise" ? "Enterprise" : "Mid-size Business"}
+                                </Badge>
                               </div>
                             </div>
                             
                             <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
                             <p className="text-lg font-medium text-rearway-blue mb-6">Client: {study.client}</p>
                             
-                            <div className="grid grid-cols-2 gap-4 mb-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                               {study.metrics.map((metric, idx) => (
                                 <div key={idx} className="bg-gray-50 dark:bg-gray-800/30 p-4 rounded-lg text-center">
-                                  <p className="text-3xl font-bold gradient-text">{metric.value}</p>
+                                  <p className="text-2xl md:text-3xl font-bold gradient-text">{metric.value}</p>
                                   <p className="text-sm text-gray-600 dark:text-gray-400">{metric.label}</p>
                                 </div>
                               ))}

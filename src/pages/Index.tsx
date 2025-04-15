@@ -55,11 +55,11 @@ const Index = () => {
         <Services />
         <Projects />
         <CaseStudies />
+        <TechStack />
         <AiAgentWorkflow />
         <AiModelTraining />
         <AiUseCases />
         <ModelTrainingPipeline />
-        <TechStack />
         <About />
         <Testimonials />
         <Contact />
