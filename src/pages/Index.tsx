@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
@@ -8,6 +9,11 @@ import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
 import Testimonials from "../components/sections/Testimonials";
 import ScrollToTop from "../components/ui/ScrollToTop";
+import AiAgentWorkflow from "../components/sections/AiAgentWorkflow";
+import AiModelTraining from "../components/sections/AiModelTraining";
+import AiUseCases from "../components/sections/AiUseCases";
+import ModelTrainingPipeline from "../components/sections/ModelTrainingPipeline";
+import TechStack from "../components/sections/TechStack";
 
 const Index = () => {
   useEffect(() => {
@@ -46,7 +52,12 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
+        <AiAgentWorkflow />
+        <AiModelTraining />
+        <AiUseCases />
+        <ModelTrainingPipeline />
         <Projects />
+        <TechStack />
         <About />
         <Testimonials />
         <Contact />
