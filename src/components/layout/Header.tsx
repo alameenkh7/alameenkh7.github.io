@@ -44,9 +44,12 @@ const Header = () => {
           <a href="#projects" className="nav-link">
             Projects
           </a>
-          <a href="#about" className="nav-link">
-            About
-          </a>
+          <Link to="/case-studies" className="nav-link">
+            Case Studies
+          </Link>
+          <Link to="/ai-solutions" className="nav-link">
+            AI Solutions
+          </Link>
           <a href="#contact" className="nav-link">
             Contact
           </a>
@@ -82,13 +85,20 @@ const Header = () => {
             >
               Projects
             </a>
-            <a
-              href="#about"
+            <Link
+              to="/case-studies"
               className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
               onClick={() => setIsMenuOpen(false)}
             >
-              About
-            </a>
+              Case Studies
+            </Link>
+            <Link
+              to="/ai-solutions"
+              className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              AI Solutions
+            </Link>
             <a
               href="#contact"
               className="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"

@@ -9,12 +9,8 @@ import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
 import Testimonials from "../components/sections/Testimonials";
 import ScrollToTop from "../components/ui/ScrollToTop";
-import AiAgentWorkflow from "../components/sections/AiAgentWorkflow";
-import AiModelTraining from "../components/sections/AiModelTraining";
-import AiUseCases from "../components/sections/AiUseCases";
-import ModelTrainingPipeline from "../components/sections/ModelTrainingPipeline";
 import TechStack from "../components/sections/TechStack";
-import CaseStudies from "../components/sections/CaseStudies";
+import CaseStudiesSimple from "../components/sections/CaseStudiesSimple";
 
 const Index = () => {
   useEffect(() => {
@@ -56,15 +52,8 @@ const Index = () => {
         <About />
         <Projects />
         <Testimonials />
-        <CaseStudies />
+        <CaseStudiesSimple />
         <TechStack />
-        <div className="hidden">
-          {/* Moving detailed technical sections out of main view flow */}
-          <AiAgentWorkflow />
-          <AiModelTraining />
-          <AiUseCases />
-          <ModelTrainingPipeline />
-        </div>
         <Contact />
       </main>
       <Footer />
