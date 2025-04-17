@@ -23,35 +23,25 @@ const Projects = () => {
     {
       id: 1,
       title: "DealBuddy",
-      description: "High-traffic scalable B2C eCommerce app that combines gamification with flash deals.",
-      image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      description: "A unique shopping experience where you decide the price — get products for as low as 1 paisa!",
+      image: "https://bid-365-dev-images.s3.ap-south-1.amazonaws.com/images/dealbuddy_banner.png",
       tags: ["eCommerce", "Gamification", "Mobile App"],
       techStack: ["Node.js", "NestJS", "AWS", "PostgreSQL"],
       links: {
-        playStore: "#",
-        appStore: "#"
+        playStore: "https://play.google.com/store/apps/details?id=com.deal.buddy&pli=1",
+        appStore: "https://apps.apple.com/us/app/dealbuddy-live/id6723903153"
       }
     },
     {
       id: 2,
       title: "Hive Wealth",
       description: "Social network for investors built using GoLang, Plaid API, and financial modeling features.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://bid-365-dev-images.s3.ap-south-1.amazonaws.com/images/hivewealth_banner.png",
       tags: ["Fintech", "Social Network", "Investing"],
       techStack: ["GoLang", "Plaid API", "React Native"],
       links: {
-        appStore: "#"
-      }
-    },
-    {
-      id: 3,
-      title: "Besync ERP",
-      description: "Flexible ERP customization studio built on our proprietary ERP solution.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      tags: ["ERP", "Enterprise", "B2B"],
-      techStack: ["Custom ERP Framework"],
-      links: {
-        website: "https://www.besync.in"
+        playStore: "https://play.google.com/store/apps/details?id=com.deal.buddy&pli=1",
+        appStore: "https://apps.apple.com/us/app/dealbuddy-live/id6723903153"
       }
     },
     {
@@ -61,6 +51,18 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80",
       tags: ["Real Estate", "CRM", "Mobile App"],
       techStack: ["Firebase", "Flutter", "Node.js"],
+      links: {
+        playStore: "#",
+        appStore: "#"
+      }
+    },
+    {
+      id: 4,
+      title: "Mix Tape Madness",
+      description: "Mixtape Madness is a British urban music outlet and an entertainment and distribution platform based in London, United Kingdom",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Mixtape_Madness_Primary_Logo_2019.png/250px-Mixtape_Madness_Primary_Logo_2019.png",
+      tags: ["Music Player",  "Mobile App"],
+      techStack: ["Firebase", "Flutter", "Nest.js"],
       links: {
         playStore: "#",
         appStore: "#"
@@ -200,13 +202,13 @@ const Projects = () => {
                   ))}
                 </div>
                 
-                <a 
+                {/* <a 
                   href="#" 
                   className="inline-flex items-center text-rearway-blue font-medium hover:underline"
                 >
                   View Case Study
                   <ExternalLink size={16} className="ml-1" />
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
@@ -295,13 +297,13 @@ const Projects = () => {
                 ))}
               </div>
               
-              <a 
+              {/* <a 
                 href="#" 
                 className="inline-flex items-center text-rearway-blue font-medium hover:underline"
               >
                 View Case Study
                 <ExternalLink size={16} className="ml-1" />
-              </a>
+              </a> */}
             </div>
           </div>
 

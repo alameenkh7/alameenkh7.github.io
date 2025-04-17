@@ -16,31 +16,31 @@ const Testimonials = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Basil Nalakath",
       position: "CEO",
       company: "Deal Buddy",
-      content: "Rearway Technologies transformed our business with their eCommerce platform. Their attention to detail and commitment to quality is unmatched. They took our idea and turned it into a scalable solution that has driven significant growth for our company.",
-      image: "https://randomuser.me/api/portraits/women/32.jpg",
+      content: "Rearway made the daunting task of launching our application feel like a breeze. Their team's approachability and sincere dedication to our project were truly refreshing. The innovative solutions in mobile app development brought our ideas to life, and their easy-to-approach attitude made the entire process smooth. I'm grateful for the expertise and support Rearway provided.",
+      image: "https://bid-365-dev-images.s3.ap-south-1.amazonaws.com/images/1740718263333.jpeg",
       rating: 5
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Kingsley Okeyere",
       position: "CTO",
-      company: "SecureLink",
-      content: "The security solution developed by Rearway Technologies has been instrumental in protecting our sensitive data. Their expertise in cybersecurity and ability to create robust systems is impressive. We've seen a 90% reduction in security incidents since implementation.",
-      image: "https://randomuser.me/api/portraits/men/54.jpg",
-      rating: 5
+      company: "Mixtape Madness",
+      content: "Our web application developed by Rearway is not only visually stunning but also highly functional. From dynamic websites to complex applications, their team showcased expertise in Java, Spring, and Spring Boot for robust back-end development",
+      image: "https://bid-365-dev-images.s3.ap-south-1.amazonaws.com/images/1556141337677.jpeg",
+      rating: 4
     },
     {
       id: 3,
-      name: "Olivia Martinez",
-      position: "Product Manager",
-      company: "EduPlay",
-      content: "Our gamified learning platform has received overwhelmingly positive feedback from users. Rearway Technologies took our vision and enhanced it with their technical expertise. Their team was communicative, professional, and delivered beyond our expectations.",
-      image: "https://randomuser.me/api/portraits/women/67.jpg",
-      rating: 4
-    }
+      name: "Arwitwik ",
+      position: "Co founder",
+      company: "Wizad AI",
+      content: "Working with Rearway was a game-changer for our business. Their innovative approach to mobile app development transformed our ideas into a user-friendly and engaging application. The team's expertise in Flutter and React Native ensured a seamless experience across platforms. I highly recommend Rearway for turning your app dreams into reality.",
+      image: "https://bid-365-dev-images.s3.ap-south-1.amazonaws.com/images/1612038721527.jpeg",
+      rating: 5
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
