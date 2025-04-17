@@ -1,8 +1,12 @@
 
 import { ArrowRight } from "lucide-react";
 import heroImage from '../../assets/images/Software Company Background Collage.webp'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { useState } from "react";
 
 const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-32">
       {/* Background with subtle gradient */}
@@ -16,28 +20,71 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Transforming Ideas into
-              <span className="block gradient-text">Cutting-Edge Software</span>
+              Software Solutions
+              <span className="block gradient-text">Made Simple</span>
             </h1>
             
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              We build end-to-end software solutions that propel businesses forward. 
-              From eCommerce to AI-powered applications, we create technology that makes a difference.
+              We build technology that solves real business problems, from eCommerce to AI applications.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a href="#services" className="btn-primary flex items-center justify-center gap-2">
-                Explore Our Services
+                Explore Solutions
                 <ArrowRight size={18} />
               </a>
               <a href="#contact" className="py-3 px-6 rounded-lg border-2 border-rearway-blue text-rearway-blue font-medium flex items-center justify-center gap-2 transition-colors hover:bg-rearway-blue/10">
-                Get in Touch
+                Contact Us
               </a>
             </div>
+
+            <Collapsible 
+              open={isOpen} 
+              onOpenChange={setIsOpen} 
+              className="bg-white/80 dark:bg-gray-800/30 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 p-2"
+            >
+              <CollapsibleTrigger className="flex w-full items-center justify-between p-2 text-sm font-medium">
+                <span>Learn more about our approach</span>
+                <div className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m6 9 6 6 6-6"/>
+                  </svg>
+                </div>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="p-4">
+                <div className="space-y-4 text-gray-600 dark:text-gray-300">
+                  <p>
+                    We partner with businesses of all sizes to create end-to-end software solutions that drive growth and efficiency.
+                  </p>
+                  <p>
+                    Our team of expert developers, designers, and strategists work together to deliver technology that makes a real difference for your business.
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 mt-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                      </div>
+                      <span className="font-medium">Fast Development</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                          <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                      </div>
+                      <span className="font-medium">Quality Assured</span>
+                    </div>
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
           </div>
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="w-full max-w-lg relative">
+            <div className="w-full max-w-md relative">
               {/* Main Image */}
               <div className="bg-white dark:bg-rearway-navy/70 rounded-2xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 animate-fade-in">
                 <img 
@@ -45,35 +92,6 @@ const Hero = () => {
                   alt="Software Development" 
                   className="w-full h-auto"
                 />
-                
-                {/* Floating Card Elements */}
-                <div className="absolute -left-6 -bottom-6 bg-white dark:bg-rearway-navy rounded-lg p-4 shadow-lg transform rotate-6 animate-bounce  border border-rearway-blue/20">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-white">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium">Fast Development</p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">Agile Methodology</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="absolute -right-6 top-24 bg-white dark:bg-rearway-navy rounded-lg p-4 shadow-lg transform -rotate-3 animate-bounce border border-rearway-purple/20">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-white">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium">Quality Assured</p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">Rigorous Testing</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

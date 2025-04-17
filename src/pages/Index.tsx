@@ -53,15 +53,18 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
+        <About />
         <Projects />
+        <Testimonials />
         <CaseStudies />
         <TechStack />
-        <AiAgentWorkflow />
-        <AiModelTraining />
-        <AiUseCases />
-        <ModelTrainingPipeline />
-        <About />
-        <Testimonials />
+        <div className="hidden">
+          {/* Moving detailed technical sections out of main view flow */}
+          <AiAgentWorkflow />
+          <AiModelTraining />
+          <AiUseCases />
+          <ModelTrainingPipeline />
+        </div>
         <Contact />
       </main>
       <Footer />
