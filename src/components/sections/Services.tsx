@@ -1,3 +1,5 @@
+
+import React, { useState } from "react";
 import { ShoppingCart, Gamepad, Smartphone, ShieldCheck, Brain, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
