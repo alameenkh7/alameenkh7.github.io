@@ -1,6 +1,4 @@
-
-import { useState } from "react";
-import { ShoppingCart, Gamepad, Smartphone, ShieldCheck, Brain, ChevronDown, ChevronUp } from "lucide-react";
+import { ShoppingCart, Gamepad, Smartphone, ShieldCheck, Brain, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface Service {
@@ -65,7 +63,6 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-gray-50 dark:bg-rearway-navy/30 relative">
-      {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-primary rounded-full filter blur-[100px] opacity-10"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-400 rounded-full filter blur-[100px] opacity-5"></div>
