@@ -90,7 +90,7 @@ const ModelTrainingPipeline = () => {
           className="relative reveal-animation mx-auto max-w-5xl"
         >
           {/* Connector Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-primary transform -translate-y-1/2 rounded-full opacity-50 hidden md:block"></div>
+          <div className="absolute -top-6 left-0 right-0 h-1 bg-gradient-primary transform -translate-y-1/2 rounded-full opacity-50 hidden md:block"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {steps.map((step, index) => (
@@ -107,7 +107,7 @@ const ModelTrainingPipeline = () => {
                       onMouseLeave={() => setActiveStep('')}
                     >
                       <div className="w-20 h-20 rounded-full bg-white dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 z-10">
-                        <div className="text-rearway-blue group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300">
+                        <div className="text-rearway-blue  group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300">
                           {step.icon}
                         </div>
                       </div>

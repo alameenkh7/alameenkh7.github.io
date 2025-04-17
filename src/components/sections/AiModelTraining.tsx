@@ -111,8 +111,8 @@ const AiModelTraining = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 ">
+          <div className="lg:col-span-1 lg:mt-40 mt-32">
             <Tabs value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="flex flex-col space-y-2 w-full bg-transparent">
                 {solutions.map(solution => (
@@ -129,7 +129,7 @@ const AiModelTraining = () => {
             </Tabs>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 lg:mt-0 mt-28">
             <Tabs value={activeTab} onValueChange={setActiveTab}>
               {solutions.map(solution => (
                 <TabsContent key={solution.id} value={solution.id} className="mt-0">

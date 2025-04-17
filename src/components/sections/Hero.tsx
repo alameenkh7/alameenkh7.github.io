@@ -1,5 +1,6 @@
 
 import { ArrowRight } from "lucide-react";
+import heroImage from '../../assets/images/Software Company Background Collage.webp'
 
 const Hero = () => {
   return (
@@ -40,13 +41,13 @@ const Hero = () => {
               {/* Main Image */}
               <div className="bg-white dark:bg-rearway-navy/70 rounded-2xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 animate-fade-in">
                 <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" 
+                  src={heroImage}
                   alt="Software Development" 
                   className="w-full h-auto"
                 />
                 
                 {/* Floating Card Elements */}
-                <div className="absolute -left-6 -bottom-6 bg-white dark:bg-rearway-navy rounded-lg p-4 shadow-lg transform rotate-6 animate-pulse border border-rearway-blue/20">
+                <div className="absolute -left-6 -bottom-6 bg-white dark:bg-rearway-navy rounded-lg p-4 shadow-lg transform rotate-6 animate-bounce  border border-rearway-blue/20">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-white">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -60,7 +61,7 @@ const Hero = () => {
                   </div>
                 </div>
                 
-                <div className="absolute -right-6 top-24 bg-white dark:bg-rearway-navy rounded-lg p-4 shadow-lg transform -rotate-3 border border-rearway-purple/20">
+                <div className="absolute -right-6 top-24 bg-white dark:bg-rearway-navy rounded-lg p-4 shadow-lg transform -rotate-3 animate-bounce border border-rearway-purple/20">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-white">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">

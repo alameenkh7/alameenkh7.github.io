@@ -197,32 +197,39 @@ const CaseStudies = () => {
                                 <div className="absolute -left-3 w-6 h-6 rounded-full bg-gradient-primary flex items-center justify-center text-white">
                                   <span className="text-xs font-bold">1</span>
                                 </div>
-                                <h4 className="text-xl font-bold mb-2">Challenge</h4>
-                                <p className="text-gray-600 dark:text-gray-300">{study.challenge}</p>
+                              <div className="ml-5">
+                              <h4 className="text-xl font-bold mb-2">Challenge</h4>
+                              <p className="text-gray-600 dark:text-gray-300">{study.challenge}</p>
                               </div>
-                              
+                              </div>
                               <div className="case-step reveal-animation mb-8" style={{ animationDelay: '300ms' }}>
                                 <div className="absolute -left-3 w-6 h-6 rounded-full bg-gradient-primary flex items-center justify-center text-white">
                                   <span className="text-xs font-bold">2</span>
                                 </div>
+                              <div className="ml-5">
                                 <h4 className="text-xl font-bold mb-2">Our Approach</h4>
                                 <p className="text-gray-600 dark:text-gray-300">{study.approach}</p>
                               </div>
+                              </div>
                               
-                              <div className="case-step reveal-animation mb-8" style={{ animationDelay: '500ms' }}>
+                              <div className="case-step reveal-animation mb-8 " style={{ animationDelay: '500ms' }}>
                                 <div className="absolute -left-3 w-6 h-6 rounded-full bg-gradient-primary flex items-center justify-center text-white">
                                   <span className="text-xs font-bold">3</span>
                                 </div>
+                              <div className="ml-5">
                                 <h4 className="text-xl font-bold mb-2">Solution</h4>
                                 <p className="text-gray-600 dark:text-gray-300">{study.solution}</p>
+                              </div>
                               </div>
                               
                               <div className="case-step reveal-animation" style={{ animationDelay: '700ms' }}>
                                 <div className="absolute -left-3 w-6 h-6 rounded-full bg-gradient-primary flex items-center justify-center text-white">
                                   <span className="text-xs font-bold">4</span>
                                 </div>
-                                <h4 className="text-xl font-bold mb-2">Results</h4>
+                              <div className="ml-5">
+                                <h4 className="text-xl font-bold mb-2 ">Results</h4>
                                 <p className="text-gray-600 dark:text-gray-300">{study.result}</p>
+                              </div>
                               </div>
                             </div>
                           </div>
