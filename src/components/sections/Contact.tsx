@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import emailjs from 'emailjs-com'; // Add this at the top
+
 
 const Contact = () => {
   const [formStatus, setFormStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -19,9 +21,22 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus("sending");
-    
-    // Simulate form submission
-    setTimeout(() => {
+  
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+  
+    emailjs.send(
+      "service_qb5dnhd",     // Replace with your actual service ID
+      "template_pn2uoag",    // Replace with your actual template ID
+      templateParams,
+      "bec2Tkec5goDe50qC"      // Replace with your actual public key
+    )
+    .then((response) => {
+      console.log("SUCCESS!", response.status, response.text);
       setFormStatus("success");
       setFormData({
         name: "",
@@ -29,14 +44,18 @@ const Contact = () => {
         subject: "",
         message: ""
       });
-      
-      // Reset form status after 5 seconds
+  
       setTimeout(() => {
         setFormStatus("idle");
       }, 5000);
-    }, 1500);
+    }, (err) => {
+      console.error("FAILED...", err);
+      setFormStatus("error");
+      setTimeout(() => {
+        setFormStatus("idle");
+      }, 5000);
+    });
   };
-
   return (
     <section id="contact" className="py-20 bg-white dark:bg-rearway-navy/50 relative overflow-hidden">
       {/* Background Elements */}
