@@ -64,20 +64,34 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== Scroll Reveal Animation =====
-const revealElements = document.querySelectorAll('.project-card, .leadership-card, .stack-category, .stat-item');
+const revealElements = document.querySelectorAll(
+    '.project-card, .stack-category, .stat-item, .timeline-item, .education-card, .certification-badge'
+);
 
 const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
-    const revealPoint = 150;
+    const revealPoint = 100;
 
-    revealElements.forEach(element => {
+    revealElements.forEach((element, index) => {
         const elementTop = element.getBoundingClientRect().top;
 
         if (elementTop < windowHeight - revealPoint) {
-            element.classList.add('reveal', 'active');
+            // Add staggered delay for timeline items
+            setTimeout(() => {
+                element.classList.add('reveal', 'active');
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, index * 50);
         }
     });
 };
+
+// Set initial state for reveal elements
+revealElements.forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(30px)';
+    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+});
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll(); // Initial check
