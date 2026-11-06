@@ -1,629 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alameen Kh - Tech Lead, Backend Architect, and Framework Author specializing in distributed systems and scalable architectures.">
-    <meta name="author" content="Alameen Kh">
-    <title>Alameen Kh | Tech Lead & Backend Architect</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AL Ameen KH — Technical Architect & Tech Lead. Golang, Node.js/NestJS, cloud-native platforms. Bangalore, India." />
+  <title>AL Ameen KH | Technical Architect & Tech Lead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">AK</a>
-            <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#stack" class="nav-link">Stack</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a href="#top" class="nav-logo" aria-label="Home">AK</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">Tech Lead | Full Stack Architect | AWS Certified</div>
-                <h1 class="hero-title">
-                    Hi, I'm <span class="gradient-text">Alameen Kh</span>
-                </h1>
-                <p class="hero-description">
-                    AWS-certified Tech Lead architecting scalable, fault-tolerant systems for 100,000+ concurrent users. Specializing in event-driven microservices, Kubernetes, and serverless architectures. Based in Dubai.
-                </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="resume.pdf" download="Alameen_Kh_Resume.pdf" class="btn btn-resume">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
-                        </svg>
-                        Download Resume
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="code-dot"></span>
-                        <span class="code-dot"></span>
-                        <span class="code-dot"></span>
-                    </div>
-                    <pre><code><span class="code-comment">// Tech Lead Philosophy</span>
-<span class="code-keyword">const</span> <span class="code-function">buildSystem</span> = <span class="code-keyword">async</span> () => {
-  <span class="code-keyword">return</span> {
-    architecture: <span class="code-string">'Clean & Scalable'</span>,
-    patterns: [<span class="code-string">'DDD'</span>, <span class="code-string">'Event-Driven'</span>],
-    focus: <span class="code-string">'Team Enablement'</span>
-  };
-};</code></pre>
-                </div>
-            </div>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Bangalore, India · Open to leadership &amp; consulting roles</p>
+          <h1 id="hero-heading">AL Ameen KH</h1>
+          <p class="hero-role">Technical Architect · Tech Lead · Golang &amp; Node.js / NestJS</p>
+          <p class="hero-pitch">
+            Founder and technical lead with 10+ years building distributed, event-driven backends and cloud-native platforms.
+            Concurrently leading delivery at Eximietas Design and Rearway Technologies — products for clients across UAE, KSA, USA and India.
+            AWS Certified Solutions Architect – Professional.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="resume.pdf" download="AL_Ameen_KH_Resume.pdf">Download Resume</a>
+            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+            <a class="btn btn-ghost" href="#projects">View Projects</a>
+          </div>
+          <ul class="hero-meta" aria-label="Contact shortcuts">
+            <li><a href="mailto:alameenkh7@gmail.com">alameenkh7@gmail.com</a></li>
+            <li><a href="tel:+918113871897">+91 8113871897</a></li>
+            <li><a href="tel:+918848277392">+91 8848277392</a></li>
+          </ul>
         </div>
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <img src="profile-image.jpeg" alt="Portrait of AL Ameen KH" width="420" height="420" />
+          </div>
+          <div class="photo-badge" aria-hidden="true">
+            <span class="mono">AWS SAP</span>
+            <span>Aug 2024</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-profile">
-                    <div class="profile-image-wrapper">
-                        <img src="profile-image.jpeg" alt="Alameen Kh - Tech Lead" class="profile-image">
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p>
-                        <strong>AWS Solution Architect - Professional</strong> certified Tech Lead with 10+ years architecting and scaling distributed, fault-tolerant backend systems for SaaS, eCommerce, and AI platforms serving 100,000+ concurrent users. Expert in the Node.js/TypeScript ecosystem, specializing in event-driven microservices and leveraging AWS Serverless/Containerization (EKS, Lambda, ECS) for high-availability cloud-native applications.
-                    </p>
-                    <p>
-                        Currently leading backend architecture at <strong>Dealbuddy</strong>, where I architect systems supporting 100K+ concurrent users using AWS ECS, RDS, Redis, and Terraform. Previously spearheaded the development of <strong>WebRavo</strong>, a modular CMS platform using clean architecture at Deltasoft Consulting, and delivered scalable billing systems at <strong>Copado</strong> via Kubernetes and Service Mesh architectures.
-                    </p>
-                    <p>
-                        I've authored frameworks like <strong>nest-clean-arch</strong> to codify Clean Architecture principles for NestJS microservices, built production systems across healthcare, logistics, IoT, and enterprise SaaS domains. I lead remote and cross-functional teams, drive technical vision, and enforce security and DevOps best practices including OAuth2, Keycloak, JWT, WAF, and CI/CD automation.
-                    </p>
-                    <div class="certification-badge">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                        <span>AWS Solution Architect - Professional (Aug 2024)</span>
-                    </div>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100K+</div>
-                            <div class="stat-label">Concurrent Users</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">7</div>
-                            <div class="stat-label">Companies Led</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2 id="about-heading">Engineering leadership at the client–platform edge</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            I architect and ship scalable backends — goroutine-based Go services, NestJS microservices, Kafka pipelines,
+            multi-tenant IAM, and AI agents — while owning delivery outcomes for international stakeholders.
+          </p>
+          <p>
+            At <strong>Eximietas Design</strong> I lead infrastructure and engineering for Xpedioo and client programs such as Zebra
+            (~500M billing records re-architected to ~$200 processing cost). As founder of <strong>Rearway Technologies</strong>
+            I deliver products including Estative (Dubai real estate), Platio (Saudi), Proppz (Florida), Dr Shafi Clinic, and
+            <strong>Resolve</strong>, an AI support agent using RAG, LangGraph and MCP.
+          </p>
+          <p>
+            Previously Tech Lead at Dealbuddy (app to 200K active users), Deltasoft Consulting (WebRavo), Copado, and Naico ITS.
+            Open-source author of NestJS clean-architecture and BullMQ tooling, plus an LLM-based AI Code Review Bot.
+          </p>
         </div>
+        <dl class="stats" aria-label="Career highlights">
+          <div class="stat">
+            <dt>10+</dt>
+            <dd>Years in software</dd>
+          </div>
+          <div class="stat">
+            <dt>~5</dt>
+            <dd>Years production Golang</dd>
+          </div>
+          <div class="stat">
+            <dt>200K</dt>
+            <dd>Active users (Dealbuddy)</dd>
+          </div>
+          <div class="stat">
+            <dt>100K+</dt>
+            <dd>Concurrent capacity designed</dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Tech Lead</h3>
-                            <span class="company">Dealbuddy</span>
-                            <span class="period">Jun 2024 - Present</span>
-                        </div>
-                        <ul class="timeline-points">
-                            <li>Architected and deployed backend supporting <strong>100K+ concurrent users</strong> using AWS ECS, RDS, Redis, and Terraform</li>
-                            <li>Built secure modular microservices architecture with WAF, OAuth2, RBAC, and API Gateway</li>
-                            <li>Led full-cycle development of mobile apps (App Store & Play Store) with CI/CD pipelines</li>
-                            <li><em>Stack:</em> Node.js, NestJS, PostgreSQL, Redis, Docker, AWS, Terraform, Firebase, Kafka</li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-heading">
+      <div class="section-head">
+        <p class="eyebrow">Experience</p>
+        <h2 id="experience-heading">Roles &amp; delivery</h2>
+        <p class="section-note">Rearway Technologies (founder) and Eximietas Design (full-time) are held concurrently.</p>
+      </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Tech Lead</h3>
-                            <span class="company">Deltasoft Consulting Pvt Ltd.</span>
-                            <span class="period">May 2023 - Jun 2024</span>
-                        </div>
-                        <ul class="timeline-points">
-                            <li>Spearheaded development of <strong>WebRavo</strong>, a highly modular CMS platform using microservices and clean architecture</li>
-                            <li>Integrated secure Keycloak-based RBAC, custom template editor, and CI pipelines</li>
-                            <li>Developed public NestJS boilerplate enforcing backend best practices</li>
-                            <li><em>Stack:</em> NestJS, GCP, Bitbucket Pipelines, PostgreSQL, Keycloak, React</li>
-                        </ul>
-                    </div>
-                </div>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article>
+            <header class="role-head">
+              <h3>Founder &amp; Technical Lead</h3>
+              <p class="company">Rearway Technologies · Kerala</p>
+              <p class="period"><time datetime="2023-08">Aug 2023</time> – Present <span class="tag">Concurrent</span></p>
+            </header>
+            <ul>
+              <li>Own architecture and delivery of products for UAE, USA, Saudi Arabia and India clients: Estative (real estate, Dubai), Proppz (social media, Florida), Platio (kitchen &amp; food delivery, Saudi Arabia), Dr Shafi Clinic (AI-optimized appointment scheduling).</li>
+              <li>Building <strong>Resolve</strong>, an AI customer-support agent for Indian SMEs using RAG, LangGraph, LangChain, MCP and vector search, with OpenAI and Claude integrations.</li>
+            </ul>
+          </article>
+        </li>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Senior Software Engineer & Team Lead</h3>
-                            <span class="company">Copado</span>
-                            <span class="period">Apr 2022 - Jun 2023</span>
-                        </div>
-                        <ul class="timeline-points">
-                            <li>Delivered scalable billing systems via NestJS, Kubernetes, Service Mesh, and microservice architecture</li>
-                            <li>Enhanced MQTT-based real-time robotics communications</li>
-                            <li>Worked on multi-region deployments and gRPC integrations</li>
-                        </ul>
-                    </div>
-                </div>
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article>
+            <header class="role-head">
+              <h3>Senior Technical Lead</h3>
+              <p class="company">Eximietas Design · Bangalore</p>
+              <p class="period"><time datetime="2025-09">Sep 2025</time> – Present <span class="tag">Concurrent</span></p>
+            </header>
+            <ul>
+              <li>Lead infrastructure architecture and engineering for <strong>Xpedioo</strong>, a multi-tenant UEM and workflow-automation platform on 11+ microservices; standards across Golang and Node.js.</li>
+              <li>Led delivery for client <strong>Zebra</strong>: multi-tenant re-architecture cutting ~500M billing-record processing cost to about $200; BigQuery APIs (NestJS/TypeScript) load-tested at ~500M records.</li>
+              <li>Casdoor-based IAM in Golang, Kafka multi-tenant isolation, Kong API Gateway, Cloud Run + Terraform, Agentic Studio and GlideRecord-style SDK sandbox.</li>
+            </ul>
+            <p class="tech-line"><span class="mono">Go · NestJS · Kafka · Kong · BigQuery · Cloud Run · K8s · Terraform</span></p>
+          </article>
+        </li>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Tech Lead</h3>
-                            <span class="company">Naico ITS</span>
-                            <span class="period">Dec 2020 - Apr 2022</span>
-                        </div>
-                        <ul class="timeline-points">
-                            <li>Built Uber-like delivery platform with real-time GPS & vehicle tracking powered by IoT and Node.js</li>
-                            <li>Architected investor-focused social media app with robust backend logic and high concurrency</li>
-                        </ul>
-                    </div>
-                </div>
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article>
+            <header class="role-head">
+              <h3>Tech Lead</h3>
+              <p class="company">Dealbuddy · Remote</p>
+              <p class="period"><time datetime="2024-06">Jun 2024</time> – <time datetime="2025-09">Sep 2025</time></p>
+            </header>
+            <ul>
+              <li>Built Dealbuddy app and backend from scratch to 200K active users; architected for 100K+ concurrent users on AWS ECS, Lambda and RDS with Terraform.</li>
+              <li>Golang analytics and fraud-detection microservices (goroutines, Kafka); Redis sorted sets for ranking; WAF, OAuth2, RBAC and API Gateway.</li>
+              <li>Led full-cycle mobile apps (App Store &amp; Play Store) and CI/CD pipelines.</li>
+            </ul>
+            <p class="tech-line"><span class="mono">Go · NestJS · PostgreSQL · Redis · Kafka · AWS ECS/Lambda · Terraform</span></p>
+          </article>
+        </li>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Senior Full Stack Developer</h3>
-                            <span class="company">Charmboard</span>
-                            <span class="period">Feb 2019 - Dec 2020</span>
-                        </div>
-                        <ul class="timeline-points">
-                            <li>Built <strong>CB Plugin V2</strong> for Zee5 OTT using Node.js, Redis, and Kaltura integration</li>
-                            <li>Applied MVC and modular service architecture to improve code maintainability</li>
-                        </ul>
-                    </div>
-                </div>
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article>
+            <header class="role-head">
+              <h3>Tech Lead</h3>
+              <p class="company">Deltasoft Consulting Pvt Ltd · Remote</p>
+              <p class="period"><time datetime="2023-05">May 2023</time> – <time datetime="2024-06">Jun 2024</time></p>
+            </header>
+            <ul>
+              <li>Spearheaded <strong>WebRavo</strong>, a modular back-office CMS with NestJS microservices and clean architecture on Kubernetes.</li>
+              <li>Custom Golang auth on Casdoor with hierarchy/RBAC; Keycloak RBAC, version-controlled template editor, CI pipelines; public NestJS boilerplate.</li>
+            </ul>
+            <p class="tech-line"><span class="mono">NestJS · Go · Casdoor · Keycloak · Kubernetes · PostgreSQL · GCP</span></p>
+          </article>
+        </li>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Full Stack Web Developer</h3>
-                            <span class="company">AssetTrackr (ZF WABCO Subsidiary)</span>
-                            <span class="period">Jan 2018 - Jan 2019</span>
-                        </div>
-                        <ul class="timeline-points">
-                            <li>Created IoT dashboards integrating tyre, fuel, and GPS sensors with MQTT and Modbus</li>
-                            <li>Real-time visualization with AngularJS, Node.js, AWS</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article>
+            <header class="role-head">
+              <h3>Senior Software Engineer – Team Lead</h3>
+              <p class="company">Copado · Remote</p>
+              <p class="period"><time datetime="2022-04">Apr 2022</time> – <time datetime="2023-06">Jun 2023</time></p>
+            </header>
+            <ul>
+              <li>Robot-creation microservice in Golang; MQTT real-time robotics communication; scalable NestJS billing on Kubernetes and service mesh; multi-region and gRPC.</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article>
+            <header class="role-head">
+              <h3>Tech Lead</h3>
+              <p class="company">Naico ITS · Remote</p>
+              <p class="period"><time datetime="2020-12">Dec 2020</time> – <time datetime="2022-04">Apr 2022</time></p>
+            </header>
+            <ul>
+              <li>GraphQL microservices in Golang and admin dashboard for ImpartHealthMedia (Hive Wealth); Uber-like delivery with real-time GPS/IoT; Anit-a-Haul logistics (NestJS, Firebase, MongoDB); investor social backend.</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item timeline-item-compact">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article>
+            <header class="role-head">
+              <h3>Earlier experience</h3>
+              <p class="period">2015 – 2020</p>
+            </header>
+            <ul class="compact-list">
+              <li><strong>Senior Full Stack Developer</strong>, Charmboard, Bengaluru (Feb 2019 – Dec 2020) — CB Plugin V2 for Kaltura / Zee5 OTT (Node.js, Redis).</li>
+              <li><strong>Full Stack Web Developer</strong>, AssetTrackr (ZF WABCO), Bengaluru (Jan 2018 – Jan 2019) — IoT dashboards (MQTT, Modbus, AngularJS, Node.js, AWS).</li>
+              <li><strong>Software Engineer</strong>, FreshToHome, Bengaluru (Jul 2017 – Jan 2018) — Inventory/procurement automation (Vue.js, Node.js, AWS Lambda).</li>
+              <li><strong>Junior Software Engineer</strong>, Global Allies Technologies, Kochi (Jun 2015 – Jul 2017) — Restaurant order systems (PHP, Node.js, MySQL).</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section id="stack" class="stack section">
-        <div class="container">
-            <h2 class="section-title">Tech Stack & Tools</h2>
-            <div class="stack-grid">
-                <div class="stack-category">
-                    <h3>Backend & Languages</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Golang</span>
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">NestJS</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">GraphQL</span>
-                        <span class="tech-tag">gRPC</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Frontend & UI</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">AngularJS</span>
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Databases & Caching</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">MariaDB</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Firestore</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Messaging & Event Systems</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Kafka</span>
-                        <span class="tech-tag">RabbitMQ</span>
-                        <span class="tech-tag">AWS SQS</span>
-                        <span class="tech-tag">MQTT</span>
-                        <span class="tech-tag">GCP Pub/Sub</span>
-                        <span class="tech-tag">Zookeeper</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Cloud & Infrastructure</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">AWS (EKS, ECS, Lambda)</span>
-                        <span class="tech-tag">GCP</span>
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">Helm</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Security & Auth</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">OAuth2.0</span>
-                        <span class="tech-tag">Keycloak</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">SSO</span>
-                        <span class="tech-tag">RBAC</span>
-                        <span class="tech-tag">WAF</span>
-                        <span class="tech-tag">HTTPS/TLS</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>DevOps & CI/CD</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">GitLab CI</span>
-                        <span class="tech-tag">Jenkins</span>
-                        <span class="tech-tag">CloudWatch</span>
-                        <span class="tech-tag">Prometheus</span>
-                        <span class="tech-tag">Grafana</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Testing & Quality</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Jest</span>
-                        <span class="tech-tag">Mocha</span>
-                        <span class="tech-tag">Chai</span>
-                        <span class="tech-tag">Supertest</span>
-                        <span class="tech-tag">Postman</span>
-                        <span class="tech-tag">Cypress</span>
-                        <span class="tech-tag">TDD/BDD</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- STACK -->
+    <section class="section" id="stack" aria-labelledby="stack-heading">
+      <div class="section-head">
+        <p class="eyebrow">Stack</p>
+        <h2 id="stack-heading">Languages, platforms &amp; practices</h2>
+      </div>
+      <div class="stack-grid">
+        <article class="stack-card">
+          <h3>Golang</h3>
+          <p>Goroutines, concurrent microservices, gRPC, GraphQL, REST, Kafka event processing, Casdoor IAM customization</p>
+        </article>
+        <article class="stack-card">
+          <h3>Node.js / NestJS</h3>
+          <p>TypeScript, Express, BullMQ, clean architecture, GraphQL, scalable APIs and microservices</p>
+        </article>
+        <article class="stack-card">
+          <h3>Cloud &amp; DevOps</h3>
+          <p>Kubernetes, Helm, Docker, Terraform; AWS (EKS, ECS, Lambda, EC2, S3, SES, RDS); GCP (Cloud Run, Pub/Sub, BigQuery); Azure; GitHub Actions, GitLab CI, Jenkins</p>
+        </article>
+        <article class="stack-card">
+          <h3>Architecture</h3>
+          <p>System design, multi-tenant platforms, event-driven, API Gateway (Kong), service mesh, serverless, RBAC</p>
+        </article>
+        <article class="stack-card">
+          <h3>Data &amp; Messaging</h3>
+          <p>PostgreSQL, MySQL, MongoDB, Redis, Firestore, BigQuery; Kafka, RabbitMQ, SQS, MQTT</p>
+        </article>
+        <article class="stack-card">
+          <h3>AI / LLM</h3>
+          <p>RAG, embeddings &amp; vector search, LangGraph, LangChain, MCP tool servers, agentic workflows, OpenAI &amp; Claude</p>
+        </article>
+        <article class="stack-card">
+          <h3>Security</h3>
+          <p>Casdoor, Keycloak, OAuth2.0, JWT, SSO, WAF, TLS</p>
+        </article>
+        <article class="stack-card">
+          <h3>Also</h3>
+          <p>Java, SQL, React, AngularJS, Vue.js · Jest, Cypress, Postman · Agile / TDD</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Deal Buddy</h3>
-                        <span class="project-period">Jun 2024 – Present</span>
-                    </div>
-                    <p class="project-description">
-                        Architected and deployed secure, scalable backend infrastructure supporting <strong>100K+ concurrent users</strong> using AWS ECS, RDS, Redis, and Terraform. Implemented WAF, OAuth2, RBAC, and automated CI/CD pipelines for mobile apps.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://apps.apple.com/us/app/dealbuddy-live/id6723903153" target="_blank" class="store-badge app-store" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                            </svg>
-                            App Store
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.deal.buddy&hl=en_IN" target="_blank" class="store-badge play-store" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                            </svg>
-                            Play Store
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">AWS ECS</span>
-                        <span class="tag">Terraform</span>
-                        <span class="tag">NestJS</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Redis</span>
-                    </div>
-                </div>
+    <!-- PROJECTS -->
+    <section class="section section-alt" id="projects" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <p class="eyebrow">Projects</p>
+        <h2 id="projects-heading">Selected products &amp; open source</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <header>
+            <h3>Dealbuddy</h3>
+            <p class="period">Jun 2024 – Sep 2025</p>
+          </header>
+          <p>Consumer deals platform built from scratch to 200K active users; Go analytics &amp; fraud detection; NestJS backends; AWS ECS / Lambda / RDS.</p>
+          <div class="project-links">
+            <a href="https://apps.apple.com/us/app/dealbuddy-live/id6723903153" target="_blank" rel="noopener noreferrer">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.deal.buddy&amp;hl=en_IN" target="_blank" rel="noopener noreferrer">Play Store</a>
+          </div>
+        </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>WebRavo</h3>
-                        <span class="project-period">May 2023 – Jun 2024</span>
-                    </div>
-                    <p class="project-description">
-                        Highly modular CMS platform built with microservices and clean architecture. Integrated Keycloak-based RBAC, version-controlled template editor, and created public NestJS boilerplate for team standardization.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://www.bravo-savings-network.com/" target="_blank" class="project-link-btn website" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="2" y1="12" x2="22" y2="12"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
-                            Live Website
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">NestJS</span>
-                        <span class="tag">GCP</span>
-                        <span class="tag">Keycloak</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Microservices</span>
-                    </div>
-                </div>
+        <article class="project-card">
+          <header>
+            <h3>WebRavo</h3>
+            <p class="period">Deltasoft Consulting</p>
+          </header>
+          <p>Modular back-office CMS on NestJS microservices and clean architecture, released on Kubernetes with Keycloak RBAC.</p>
+          <div class="project-links">
+            <a href="https://www.bravo-savings-network.com/" target="_blank" rel="noopener noreferrer">Live site</a>
+          </div>
+        </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Revenure (AI Finance Tool)</h3>
-                        <span class="project-period">Dec 2023 – Jul 2024</span>
-                    </div>
-                    <p class="project-description">
-                        AI-powered finance automation tool for procurement and account reconciliation. Deployed at Eastern Foods, improving processing accuracy and operational speed through intelligent data extraction and matching algorithms.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://revenure.com/" target="_blank" class="project-link-btn website" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="2" y1="12" x2="22" y2="12"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
-                            Live Website
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">AI/ML</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Automation</span>
-                    </div>
-                </div>
+        <article class="project-card">
+          <header>
+            <h3>Revenure</h3>
+            <p class="period">AI Finance Tool</p>
+          </header>
+          <p>AI finance product — live product site preserved from prior portfolio.</p>
+          <div class="project-links">
+            <a href="https://revenure.com/" target="_blank" rel="noopener noreferrer">Live site</a>
+          </div>
+        </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Anit-a-Haul</h3>
-                        <span class="project-period">Oct 2021 – Apr 2022</span>
-                    </div>
-                    <p class="project-description">
-                        Real-time logistics tracking solution with GPS & vehicle tracking. Built using NestJS, Firebase, and MongoDB to provide Uber-like delivery platform with IoT integration and live location updates.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://anitahaul.com/" target="_blank" class="project-link-btn website" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="2" y1="12" x2="22" y2="12"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
-                            Live Website
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">NestJS</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">IoT</span>
-                        <span class="tag">Real-time</span>
-                    </div>
-                </div>
+        <article class="project-card">
+          <header>
+            <h3>Anit-a-Haul</h3>
+            <p class="period">Naico ITS</p>
+          </header>
+          <p>Real-time logistics tracking with NestJS, Firebase and MongoDB.</p>
+          <div class="project-links">
+            <a href="https://anitahaul.com/" target="_blank" rel="noopener noreferrer">Live site</a>
+          </div>
+        </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Hive Wealth (formerly ImpartHealthMedia)</h3>
-                        <span class="project-period">Jan 2021 – Sep 2021</span>
-                    </div>
-                    <p class="project-description">
-                        Developed GraphQL microservices and admin dashboard using Golang, React, and Terraform. Implemented scalable architecture for healthcare media management with multi-region deployment capabilities. Now rebranded as Hive Wealth.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://apps.apple.com/us/app/hive-wealth/id6448564934" target="_blank" class="store-badge app-store" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                            </svg>
-                            App Store
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Golang</span>
-                        <span class="tag">GraphQL</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Terraform</span>
-                    </div>
-                </div>
+        <article class="project-card">
+          <header>
+            <h3>Hive Wealth</h3>
+            <p class="period">formerly ImpartHealthMedia</p>
+          </header>
+          <p>GraphQL microservices in Golang and admin dashboard (React, Terraform) for investor-focused platform.</p>
+          <div class="project-links">
+            <a href="https://apps.apple.com/us/app/hive-wealth/id6448564934" target="_blank" rel="noopener noreferrer">App Store</a>
+          </div>
+        </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>AI Code Review Bot</h3>
-                        <span class="project-period">Open Source Project</span>
-                    </div>
-                    <p class="project-description">
-                        An intelligent GitHub-integrated bot that automatically reviews pull requests, analyzes code quality, detects potential issues, and provides smart improvement suggestions using AI. Automates code review workflows for development teams.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/alameenkh7/AI-code-review-bot" target="_blank" class="project-link-btn github" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View on GitHub
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">AI/ML</span>
-                        <span class="tag">GitHub API</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Automation</span>
-                        <span class="tag">Code Analysis</span>
-                    </div>
-                </div>
+        <article class="project-card">
+          <header>
+            <h3>Xpedioo &amp; Zebra</h3>
+            <p class="period">Eximietas Design</p>
+          </header>
+          <p>Multi-tenant UEM / workflow platform (11+ services) and Zebra billing re-architecture (~500M records → ~$200 processing cost).</p>
+        </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>nest-clean-arch</h3>
-                        <span class="project-period">Open Source Framework</span>
-                    </div>
-                    <p class="project-description">
-                        Production-ready Clean Architecture framework for NestJS. Demonstrates how to build scalable and maintainable applications with modular design, extensible structure, and strict separation of concerns adhering to best practices.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/alameenkh7/nest-clean-arch" target="_blank" class="project-link-btn github" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View on GitHub
-                        </a>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">NestJS</span>
-                        <span class="tag">Clean Architecture</span>
-                        <span class="tag">DDD</span>
-                        <span class="tag">Framework</span>
-                    </div>
-                </div>
+        <article class="project-card">
+          <header>
+            <h3>Rearway products</h3>
+            <p class="period">Estative · Platio · Proppz · Dr Shafi</p>
+          </header>
+          <p>International client products across Dubai real estate, Saudi food delivery, Florida social, and AI-optimized clinic scheduling.</p>
+        </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>CB Plugin V2 (Zee5 OTT)</h3>
-                        <span class="project-period">Feb 2019 - Dec 2020</span>
-                    </div>
-                    <p class="project-description">
-                        Designed and developed video playback plugin from scratch to enhance streaming experience for Zee5 OTT platform. Integrated with Kaltura Player using Node.js, Redis, and MVC architecture for millions of users.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Redis</span>
-                        <span class="tag">Kaltura</span>
-                        <span class="tag">Video Streaming</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <article class="project-card">
+          <header>
+            <h3>Resolve AI</h3>
+            <p class="period">Rearway · in progress</p>
+          </header>
+          <p>AI customer-support agent for Indian SMEs — RAG, LangGraph, LangChain, MCP, OpenAI &amp; Claude.</p>
+        </article>
+
+        <article class="project-card">
+          <header>
+            <h3>AI Code Review Bot</h3>
+            <p class="period">Open source</p>
+          </header>
+          <p>LLM-based code reviewer published as a GitHub App.</p>
+          <div class="project-links">
+            <a href="https://github.com/alameenkh7/AI-code-review-bot" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <header>
+            <h3>nest-clean-arch</h3>
+            <p class="period">Open source</p>
+          </header>
+          <p>NestJS clean-architecture bootstrap kit for new projects.</p>
+          <div class="project-links">
+            <a href="https://github.com/alameenkh7/nest-clean-arch" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <header>
+            <h3>CB Plugin V2</h3>
+            <p class="period">Charmboard / Zee5 OTT</p>
+          </header>
+          <p>Kaltura Player plugin built from scratch for Zee5 OTT (Node.js, Redis).</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education section">
-        <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
-            <div class="education-grid">
-                <div class="education-card cert-card">
-                    <div class="cert-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                    </div>
-                    <h3>AWS Solution Architect - Professional</h3>
-                    <p class="cert-org">Amazon Web Services</p>
-                    <p class="cert-date">Issued: August 2024</p>
-                    <p class="cert-desc">Advanced certification demonstrating expertise in designing and deploying dynamically scalable, highly available, fault-tolerant, and reliable applications on AWS.</p>
-                </div>
-
-                <div class="education-card">
-                    <div class="edu-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                        </svg>
-                    </div>
-                    <h3>B.Tech in Computer Science</h3>
-                    <p class="edu-org">NIT Calicut</p>
-                    <p class="edu-location">Calicut, Kerala</p>
-                    <p class="edu-date">Graduated: May 2015</p>
-                </div>
-            </div>
-        </div>
+    <!-- EDUCATION -->
+    <section class="section" id="education" aria-labelledby="education-heading">
+      <div class="section-head">
+        <p class="eyebrow">Education &amp; certification</p>
+        <h2 id="education-heading">Credentials</h2>
+      </div>
+      <div class="edu-grid">
+        <article class="edu-card">
+          <p class="eyebrow">Certification</p>
+          <h3>AWS Certified Solutions Architect – Professional</h3>
+          <p class="period">Aug 2024</p>
+        </article>
+        <article class="edu-card">
+          <p class="eyebrow">Degree</p>
+          <h3>B.Tech, Computer Science &amp; Engineering</h3>
+          <p>NIT Calicut, Kerala</p>
+          <p class="period">2015</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="contact-intro">Open to discussing backend architecture, team leadership, and framework design.</p>
-            <div class="resume-download-section">
-                <a href="resume.pdf" download="Alameen_Kh_Resume.pdf" class="btn btn-resume-large">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                        <polyline points="7 10 12 15 17 10"/>
-                        <line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                    Download My Resume
-                </a>
-            </div>
-            <div class="contact-grid">
-                <a href="https://github.com/alameenkh7" target="_blank" class="contact-card" rel="noopener">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/al-ameen-kh" target="_blank" class="contact-card" rel="noopener">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://medium.com/@alameenkh7" target="_blank" class="contact-card" rel="noopener">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
-                    </svg>
-                    <span>Medium Blog</span>
-                </a>
-                <a href="https://stackoverflow.com/users/6314203/al-ameen" target="_blank" class="contact-card" rel="noopener">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.936v.014zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.35 1.617-.01.001zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.749 0h.002z"/>
-                    </svg>
-                    <span>Stack Overflow</span>
-                </a>
-                <a href="mailto:alameenkh7@gmail.com" class="contact-card">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
-                    </svg>
-                    <span>Email</span>
-                </a>
-            </div>
-        </div>
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-heading">
+      <div class="section-head">
+        <p class="eyebrow">Connect</p>
+        <h2 id="contact-heading">Let’s talk</h2>
+        <p class="section-note">Bangalore, India · Available for Client IT Head, Tech Lead, and consulting conversations.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:alameenkh7@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">alameenkh7@gmail.com</span>
+        </a>
+        <a class="contact-card" href="tel:+918113871897">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+91 8113871897</span>
+        </a>
+        <a class="contact-card" href="tel:+918848277392">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+91 8848277392</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/al-ameen-kh" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">al-ameen-kh</span>
+        </a>
+        <a class="contact-card" href="https://github.com/alameenkh7" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">alameenkh7</span>
+        </a>
+        <a class="contact-card" href="https://medium.com/@alameenkh7" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">Medium</span>
+          <span class="contact-value">@alameenkh7</span>
+        </a>
+        <a class="contact-card" href="https://stackoverflow.com/users/6314203/al-ameen" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">Stack Overflow</span>
+          <span class="contact-value">al-ameen</span>
+        </a>
+        <a class="contact-card contact-card-cta" href="resume.pdf" download="AL_Ameen_KH_Resume.pdf">
+          <span class="contact-label">Resume</span>
+          <span class="contact-value">Download PDF</span>
+        </a>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Alameen Kh. Built with passion for clean code and great architecture.</p>
-        </div>
-    </footer>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> AL Ameen KH · Bangalore, India</p>
+    <a href="#top">Back to top</a>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
